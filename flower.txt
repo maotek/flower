@@ -1,0 +1,10 @@
+mkspiffs.exe -c data -b 8192 -p 256 -s 2097152 image.bin
+mkspiffs.exe -c data -b 8192 -p 256 -s 3145728 image.bin
+
+// Little FS has problems TODO mklittlefs.exe -c data -b 8192 -p 256 -s 2097152 image.bin
+
+https://github.com/ivanseidel/UTFT/blob/master/Tools/ImageConverter565.exe
+
+esptool.exe -p COM3 --chip esp8266 --port COM3 --baud 921600 write_flash  0x100000 image.bin
+
+mkspiffs.exe -c data -b 8192 -p 256 -s 3112960 image.bin
